@@ -12,6 +12,8 @@
 		4E0C95781D4867CF00F3F161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C95761D4867CF00F3F161 /* Main.storyboard */; };
 		4E0C957A1D4867CF00F3F161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C95791D4867CF00F3F161 /* Assets.xcassets */; };
 		4E0C957D1D4867CF00F3F161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C957B1D4867CF00F3F161 /* LaunchScreen.storyboard */; };
+		4E0C95861D486A5A00F3F161 /* DeleteCellsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C95851D486A5A00F3F161 /* DeleteCellsVC.swift */; };
+		4E0C95891D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C95881D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4E0C95791D4867CF00F3F161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E0C957C1D4867CF00F3F161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E0C957E1D4867CF00F3F161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0C95851D486A5A00F3F161 /* DeleteCellsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteCellsVC.swift; sourceTree = "<group>"; };
+		4E0C95881D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteCellsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		4E0C95711D4867CF00F3F161 /* CollectionViewJazz */ = {
 			isa = PBXGroup;
 			children = (
+				4E0C95871D486E9300F3F161 /* View */,
+				4E0C95841D4867DC00F3F161 /* Controller */,
 				4E0C95721D4867CF00F3F161 /* AppDelegate.swift */,
 				4E0C95741D4867CF00F3F161 /* ViewController.swift */,
 				4E0C95761D4867CF00F3F161 /* Main.storyboard */,
@@ -62,6 +68,22 @@
 				4E0C957E1D4867CF00F3F161 /* Info.plist */,
 			);
 			path = CollectionViewJazz;
+			sourceTree = "<group>";
+		};
+		4E0C95841D4867DC00F3F161 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E0C95851D486A5A00F3F161 /* DeleteCellsVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4E0C95871D486E9300F3F161 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E0C95881D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +160,8 @@
 			files = (
 				4E0C95751D4867CF00F3F161 /* ViewController.swift in Sources */,
 				4E0C95731D4867CF00F3F161 /* AppDelegate.swift in Sources */,
+				4E0C95861D486A5A00F3F161 /* DeleteCellsVC.swift in Sources */,
+				4E0C95891D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
