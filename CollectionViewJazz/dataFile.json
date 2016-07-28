@@ -1,0 +1,157 @@
+{
+	"inventory": [{
+		"_id": {
+			"$oid": "55b14d63f43d097d2e88ae7c"
+		},
+		"image": "http://media.ed.edmunds-media.com/acura/ilx/2014/oem/2014_acura_ilx_sedan_base_fq_oem_8_600.jpg",
+		"key": "200471912-1437683043377",
+		"make": "Acura",
+		"model": "ILX",
+		"name": "Acura ILX",
+		"submodel": "sedan",
+		"trim": "Technology Package",
+		"type": "sedan",
+		"values": {
+			"comfort": 8.5,
+			"condition": 9,
+			"fuel_eff": 24,
+			"horsepower": 150,
+			"performance": 7,
+			"price": 31600,
+			"safety": "7.00"
+		},
+		"year": "2014"
+	}, {
+		"_id": {
+			"$oid": "55b15147f43d097d2e88af26"
+		},
+		"image": "http://media.ed.edmunds-media.com/hyundai/equus/2014/oem/2014_hyundai_equus_sedan_ultimate_fq_oem_1_600.jpg",
+		"key": "200481968-1437684039146",
+		"make": "Hyundai",
+		"model": "Equus",
+		"name": "Hyundai Equus",
+		"submodel": "sedan",
+		"trim": "Signature",
+		"type": "sedan",
+		"values": {
+			"comfort": 8,
+			"condition": 9,
+			"fuel_eff": 15,
+			"horsepower": 429,
+			"performance": 7.5,
+			"price": 61250,
+			"safety": "6.75"
+		},
+		"year": "2014"
+	}, {
+		"_id": {
+			"$oid": "55b1514bf43d097d2e88af28"
+		},
+		"image": "http://media.ed.edmunds-media.com/hyundai/genesis/2013/oem/2013_hyundai_genesis_sedan_50-r-spec_fq_oem_2_600.jpg",
+		"key": "200494126-1437684043121",
+		"make": "Hyundai",
+		"model": "Genesis",
+		"name": "Hyundai Genesis",
+		"submodel": "50-r-spec",
+		"trim": "5.0 R-Spec",
+		"type": "sedan",
+		"values": {
+			"comfort": 8,
+			"condition": 9,
+			"fuel_eff": 15,
+			"horsepower": 429,
+			"performance": 7.5,
+			"price": 47400,
+			"safety": "NA"
+		},
+		"year": "2014"
+	}, {
+		"_id": {
+			"$oid": "55b15150f43d097d2e88af2a"
+		},
+		"image": "http://media.ed.edmunds-media.com/hyundai/santa-fe/2014/oem/2014_hyundai_santa-fe_4dr-suv_limited_fq_oem_12_600.jpg",
+		"key": "200717909-1437684047953",
+		"make": "Hyundai",
+		"model": "Santafe",
+		"name": "Hyundai Santafe",
+		"submodel": "suv",
+		"trim": "Limited",
+		"type": "suv",
+		"values": {
+			"comfort": 8,
+			"condition": 9,
+			"fuel_eff": 18,
+			"horsepower": 290,
+			"performance": 7.5,
+			"price": 34000,
+			"safety": "NA"
+		},
+		"year": "2014"
+	}, {
+		"_id": {
+			"$oid": "55b15159f43d097d2e88af2c"
+		},
+		"image": "http://media.ed.edmunds-media.com/hyundai/sonata/2015/oem/2015_hyundai_sonata_sedan_sport-20t_fq_oem_7_600.jpg",
+		"key": "200698177-1437684056182",
+		"make": "Hyundai",
+		"model": "Sonata",
+		"name": "Hyundai Sonata",
+		"submodel": "sedan",
+		"trim": "Sport",
+		"type": "sedan",
+		"values": {
+			"comfort": 8.5,
+			"condition": 8,
+			"fuel_eff": 24,
+			"horsepower": 185,
+			"performance": 7,
+			"price": 23175,
+			"safety": "7.25"
+		},
+		"year": "2015"
+	}, {
+		"_id": {
+			"$oid": "55b1515cf43d097d2e88af2e"
+		},
+		"image": "http://media.ed.edmunds-media.com/hyundai/tucson/2014/oem/2014_hyundai_tucson_4dr-suv_limited_fq_oem_2_600.jpg",
+		"key": "200705616-1437684060406",
+		"make": "Hyundai",
+		"model": "Tucson",
+		"name": "Hyundai Tucson",
+		"submodel": "suv",
+		"trim": "Limited",
+		"type": "suv",
+		"values": {
+			"comfort": 7,
+			"condition": 10,
+			"fuel_eff": 21,
+			"horsepower": 182,
+			"performance": 6.5,
+			"price": 26450,
+			"safety": "6.00"
+		},
+		"year": "2015"
+	}, {
+		"_id": {
+			"$oid": "55b15160f43d097d2e88af30"
+		},
+		"image": "http://media.ed.edmunds-media.com/hyundai/veloster/2015/oem/2015_hyundai_veloster_2dr-hatchback_turbo_fq_oem_3_600.jpg",
+		"key": "200707507-1437684064329",
+		"make": "Hyundai",
+		"model": "Veloster",
+		"name": "Hyundai Veloster",
+		"submodel": "hatchback",
+		"trim": "Turbo",
+		"type": "hatchback",
+		"values": {
+			"comfort": 7,
+			"condition": 9,
+			"fuel_eff": 24,
+			"horsepower": 201,
+			"performance": 6.5,
+			"price": 22600,
+			"safety": "NA"
+		},
+		"year": "2015"
+	}]
+}

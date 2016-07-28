@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
+    <entity name="Car" representedClassName=".Car" syncable="YES">
+        <attribute name="make" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="carImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarImage" inverseName="cars" inverseEntity="CarImage" syncable="YES"/>
+        <relationship name="specs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Specification" inverseName="cars" inverseEntity="Specification" syncable="YES"/>
+    </entity>
+    <entity name="CarImage" representedClassName=".CarImage" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="cars" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="carImage" inverseEntity="Car" syncable="YES"/>
+    </entity>
+    <entity name="Specification" representedClassName=".Specification" syncable="YES">
+        <attribute name="avgFuel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="conditionRating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="horsepower" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="safetyRating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cars" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Car" inverseName="specs" inverseEntity="Car" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Car" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="CarImage" positionX="-54" positionY="27" width="128" height="75"/>
+        <element name="Specification" positionX="-36" positionY="36" width="128" height="135"/>
+    </elements>
+</model>
