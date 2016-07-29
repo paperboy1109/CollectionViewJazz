@@ -2,7 +2,7 @@
 //  Car+CoreDataProperties.swift
 //  CollectionViewJazz
 //
-//  Created by Daniel J Janiak on 7/27/16.
+//  Created by Daniel J Janiak on 7/28/16.
 //  Copyright © 2016 Daniel J Janiak. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,7 +19,7 @@ extension Car {
     @NSManaged var price: NSNumber?
     @NSManaged var thumbnail: NSData?
     @NSManaged var year: NSNumber?
-    @NSManaged var carImage: NSManagedObject?
-    @NSManaged var specs: NSManagedObject?
+    @NSManaged var carImage: CarImage?
+    @NSManaged var specs: Specification?
 
 }

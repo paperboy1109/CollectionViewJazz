@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let coreDataStack = CoreDataStack()
+        let deleteCellsVC = self.window?.rootViewController as! DeleteCellsVC
+        deleteCellsVC.managedObjectContext = coreDataStack.managedObjectContext
+        
         
         //deleteRecords()
         checkDataStore()

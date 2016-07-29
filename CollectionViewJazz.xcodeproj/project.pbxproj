@@ -16,12 +16,6 @@
 		4E0C95891D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C95881D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift */; };
 		4EAF38521D49CB760088E2AA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF38511D49CB760088E2AA /* CoreDataStack.swift */; };
 		4EAF38551D49CC920088E2AA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF38531D49CC920088E2AA /* Model.xcdatamodeld */; };
-		4EAF385C1D49CE770088E2AA /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF38561D49CE770088E2AA /* Car+CoreDataProperties.swift */; };
-		4EAF385D1D49CE770088E2AA /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF38571D49CE770088E2AA /* Car.swift */; };
-		4EAF385E1D49CE770088E2AA /* CarImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF38581D49CE770088E2AA /* CarImage+CoreDataProperties.swift */; };
-		4EAF385F1D49CE770088E2AA /* CarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF38591D49CE770088E2AA /* CarImage.swift */; };
-		4EAF38601D49CE770088E2AA /* Specification+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF385A1D49CE770088E2AA /* Specification+CoreDataProperties.swift */; };
-		4EAF38611D49CE770088E2AA /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF385B1D49CE770088E2AA /* Specification.swift */; };
 		4EAF38631D49CFAF0088E2AA /* dataFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF38621D49CFAF0088E2AA /* dataFile.json */; };
 		4EAF38BE1D49D01D0088E2AA /* 2014AcuraILX.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF38651D49D01D0088E2AA /* 2014AcuraILX.jpg */; };
 		4EAF38BF1D49D01D0088E2AA /* 2014AudiA4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF38661D49D01D0088E2AA /* 2014AudiA4.jpg */; };
@@ -112,6 +106,13 @@
 		4EAF39141D49D01D0088E2AA /* 2015HyundaiSonata.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF38BB1D49D01D0088E2AA /* 2015HyundaiSonata.jpg */; };
 		4EAF39151D49D01D0088E2AA /* 2015HyundaiTucson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF38BC1D49D01D0088E2AA /* 2015HyundaiTucson.jpg */; };
 		4EAF39161D49D01D0088E2AA /* 2015HyundaiVeloster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF38BD1D49D01D0088E2AA /* 2015HyundaiVeloster.jpg */; };
+		4EAF391A1D4B1B820088E2AA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF39191D4B1B820088E2AA /* DataService.swift */; };
+		4EAF39211D4B1E850088E2AA /* Specification+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF391B1D4B1E850088E2AA /* Specification+CoreDataProperties.swift */; };
+		4EAF39221D4B1E850088E2AA /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF391C1D4B1E850088E2AA /* Specification.swift */; };
+		4EAF39231D4B1E850088E2AA /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF391D1D4B1E850088E2AA /* Car+CoreDataProperties.swift */; };
+		4EAF39241D4B1E850088E2AA /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF391E1D4B1E850088E2AA /* Car.swift */; };
+		4EAF39251D4B1E850088E2AA /* CarImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF391F1D4B1E850088E2AA /* CarImage+CoreDataProperties.swift */; };
+		4EAF39261D4B1E850088E2AA /* CarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF39201D4B1E850088E2AA /* CarImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,12 +127,6 @@
 		4E0C95881D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteCellsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EAF38511D49CB760088E2AA /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		4EAF38541D49CC920088E2AA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		4EAF38561D49CE770088E2AA /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Car+CoreDataProperties.swift"; path = "../Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4EAF38571D49CE770088E2AA /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = ../Car.swift; sourceTree = "<group>"; };
-		4EAF38581D49CE770088E2AA /* CarImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CarImage+CoreDataProperties.swift"; path = "../CarImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4EAF38591D49CE770088E2AA /* CarImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarImage.swift; path = ../CarImage.swift; sourceTree = "<group>"; };
-		4EAF385A1D49CE770088E2AA /* Specification+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Specification+CoreDataProperties.swift"; path = "../Specification+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4EAF385B1D49CE770088E2AA /* Specification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specification.swift; path = ../Specification.swift; sourceTree = "<group>"; };
 		4EAF38621D49CFAF0088E2AA /* dataFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dataFile.json; sourceTree = "<group>"; };
 		4EAF38651D49D01D0088E2AA /* 2014AcuraILX.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2014AcuraILX.jpg; sourceTree = "<group>"; };
 		4EAF38661D49D01D0088E2AA /* 2014AudiA4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2014AudiA4.jpg; sourceTree = "<group>"; };
@@ -222,6 +217,13 @@
 		4EAF38BB1D49D01D0088E2AA /* 2015HyundaiSonata.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2015HyundaiSonata.jpg; sourceTree = "<group>"; };
 		4EAF38BC1D49D01D0088E2AA /* 2015HyundaiTucson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2015HyundaiTucson.jpg; sourceTree = "<group>"; };
 		4EAF38BD1D49D01D0088E2AA /* 2015HyundaiVeloster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2015HyundaiVeloster.jpg; sourceTree = "<group>"; };
+		4EAF39191D4B1B820088E2AA /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		4EAF391B1D4B1E850088E2AA /* Specification+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Specification+CoreDataProperties.swift"; path = "../Specification+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4EAF391C1D4B1E850088E2AA /* Specification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specification.swift; path = ../Specification.swift; sourceTree = "<group>"; };
+		4EAF391D1D4B1E850088E2AA /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Car+CoreDataProperties.swift"; path = "../Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4EAF391E1D4B1E850088E2AA /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = ../Car.swift; sourceTree = "<group>"; };
+		4EAF391F1D4B1E850088E2AA /* CarImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CarImage+CoreDataProperties.swift"; path = "../CarImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4EAF39201D4B1E850088E2AA /* CarImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarImage.swift; path = ../CarImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,15 +256,13 @@
 		4E0C95711D4867CF00F3F161 /* CollectionViewJazz */ = {
 			isa = PBXGroup;
 			children = (
-				4EAF38641D49D01D0088E2AA /* images */,
+				4EAF39181D4B1B0A0088E2AA /* Assets */,
+				4EAF39171D4B1AFC0088E2AA /* Services */,
 				4EAF38501D49CB570088E2AA /* Model */,
 				4E0C95871D486E9300F3F161 /* View */,
 				4E0C95841D4867DC00F3F161 /* Controller */,
 				4E0C95721D4867CF00F3F161 /* AppDelegate.swift */,
 				4E0C95741D4867CF00F3F161 /* ViewController.swift */,
-				4E0C95761D4867CF00F3F161 /* Main.storyboard */,
-				4E0C95791D4867CF00F3F161 /* Assets.xcassets */,
-				4E0C957B1D4867CF00F3F161 /* LaunchScreen.storyboard */,
 				4EAF38621D49CFAF0088E2AA /* dataFile.json */,
 				4E0C957E1D4867CF00F3F161 /* Info.plist */,
 			);
@@ -288,12 +288,12 @@
 		4EAF38501D49CB570088E2AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4EAF38561D49CE770088E2AA /* Car+CoreDataProperties.swift */,
-				4EAF38571D49CE770088E2AA /* Car.swift */,
-				4EAF38581D49CE770088E2AA /* CarImage+CoreDataProperties.swift */,
-				4EAF38591D49CE770088E2AA /* CarImage.swift */,
-				4EAF385A1D49CE770088E2AA /* Specification+CoreDataProperties.swift */,
-				4EAF385B1D49CE770088E2AA /* Specification.swift */,
+				4EAF391B1D4B1E850088E2AA /* Specification+CoreDataProperties.swift */,
+				4EAF391C1D4B1E850088E2AA /* Specification.swift */,
+				4EAF391D1D4B1E850088E2AA /* Car+CoreDataProperties.swift */,
+				4EAF391E1D4B1E850088E2AA /* Car.swift */,
+				4EAF391F1D4B1E850088E2AA /* CarImage+CoreDataProperties.swift */,
+				4EAF39201D4B1E850088E2AA /* CarImage.swift */,
 				4EAF38511D49CB760088E2AA /* CoreDataStack.swift */,
 				4EAF38531D49CC920088E2AA /* Model.xcdatamodeld */,
 			);
@@ -394,6 +394,25 @@
 				4EAF38BD1D49D01D0088E2AA /* 2015HyundaiVeloster.jpg */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		4EAF39171D4B1AFC0088E2AA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF39191D4B1B820088E2AA /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		4EAF39181D4B1B0A0088E2AA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4E0C95761D4867CF00F3F161 /* Main.storyboard */,
+				4E0C95791D4867CF00F3F161 /* Assets.xcassets */,
+				4E0C957B1D4867CF00F3F161 /* LaunchScreen.storyboard */,
+				4EAF38641D49D01D0088E2AA /* images */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,18 +577,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EAF385E1D49CE770088E2AA /* CarImage+CoreDataProperties.swift in Sources */,
+				4EAF39251D4B1E850088E2AA /* CarImage+CoreDataProperties.swift in Sources */,
+				4EAF39221D4B1E850088E2AA /* Specification.swift in Sources */,
+				4EAF391A1D4B1B820088E2AA /* DataService.swift in Sources */,
+				4EAF39261D4B1E850088E2AA /* CarImage.swift in Sources */,
 				4EAF38521D49CB760088E2AA /* CoreDataStack.swift in Sources */,
-				4EAF385F1D49CE770088E2AA /* CarImage.swift in Sources */,
-				4EAF38611D49CE770088E2AA /* Specification.swift in Sources */,
 				4E0C95751D4867CF00F3F161 /* ViewController.swift in Sources */,
-				4EAF385D1D49CE770088E2AA /* Car.swift in Sources */,
-				4EAF385C1D49CE770088E2AA /* Car+CoreDataProperties.swift in Sources */,
 				4E0C95731D4867CF00F3F161 /* AppDelegate.swift in Sources */,
 				4E0C95861D486A5A00F3F161 /* DeleteCellsVC.swift in Sources */,
+				4EAF39231D4B1E850088E2AA /* Car+CoreDataProperties.swift in Sources */,
+				4EAF39241D4B1E850088E2AA /* Car.swift in Sources */,
+				4EAF39211D4B1E850088E2AA /* Specification+CoreDataProperties.swift in Sources */,
 				4E0C95891D486ECA00F3F161 /* DeleteCellsCollectionViewCell.swift in Sources */,
 				4EAF38551D49CC920088E2AA /* Model.xcdatamodeld in Sources */,
-				4EAF38601D49CE770088E2AA /* Specification+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

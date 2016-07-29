@@ -7,8 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 class DeleteCellsVC: UIViewController {
+    
+    // MARK: - Properties
+    
+    var managedObjectContext: NSManagedObjectContext!
+    
+    var dataService: DataService!
+    
+    var carArray: [Car] = []
     
     // MARK: - Outlets
     
@@ -24,6 +33,10 @@ class DeleteCellsVC: UIViewController {
         /* Configure the collection view */
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        /* Load sample data */
+        dataService = DataService(managedObjectContext: managedObjectContext)
+        carArray = dataService.getInventory()
     }
 
     /*
@@ -48,7 +61,7 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 3
+        return carArray.count
     }
     
     
@@ -57,6 +70,11 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! DeleteCellsCollectionViewCell
         
         cell.imageView.backgroundColor = UIColor.blueColor()
+        
+        let car = carArray[indexPath.row]
+        let carImage = car.carImage!
+        let carUIImage = UIImage(data: carImage.image!)
+        cell.imageView.image = carUIImage
         
         return cell
         
