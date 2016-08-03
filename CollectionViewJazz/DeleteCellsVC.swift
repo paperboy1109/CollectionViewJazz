@@ -14,6 +14,7 @@ class DeleteCellsVC: UIViewController {
     // MARK: - Properties
     
     var managedObjectContext: NSManagedObjectContext!
+    var coreDataStack: CoreDataStack!
     
     var fetchedResultsController: NSFetchedResultsController!
     var insertedIndexPaths: [NSIndexPath]!
@@ -35,6 +36,8 @@ class DeleteCellsVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.managedObjectContext = coreDataStack.managedObjectContext
         
         /* Configure the collection view */
         collectionView.delegate = self
@@ -72,6 +75,8 @@ class DeleteCellsVC: UIViewController {
 
 }
 
+// MARK: - Delegate methods for the collection view
+
 
 extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -108,11 +113,7 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.imageView.image = carUIImage */
         
         /* With the Fetched Results Controller */
-        //x let indexPathAdjusted = NSIndexPath(forItem: indexPath.item - numberOfStaticCells, inSection: 0)
-        //x use adjusted indexPath for fetching an object
-        //x let photo = fetchedResultsController.objectAtIndexPath(indexPathAdjusted) as! Photo
-        let carFromfetchedResultsController = fetchedResultsController.objectAtIndexPath(indexPath) as! Car
-        //x var imageData: NSData!
+        let carFromfetchedResultsController = fetchedResultsController.objectAtIndexPath(indexPath) as! Car        
         let image = carFromfetchedResultsController.carImage!
         let imageUIImage = UIImage(data: image.image!)
         cell.imageView.image = imageUIImage
@@ -127,12 +128,12 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
         
         print("Cell at index path \(indexPath) was tapped ")
         
-        /*
         carToDelete = fetchedResultsController.objectAtIndexPath(indexPath) as? Car
-        self.managedObjectContext.deleteObject(self.movieToDelete!)
-        self.coreData.saveContext()
-        self.movieToDelete = nil */
         
+        self.managedObjectContext.deleteObject(self.carToDelete!)
+        self.coreDataStack.saveContext()
+        self.carToDelete = nil
+                
     }
     
     
@@ -140,6 +141,7 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
 }
 
+// MARK: - Delegate methods for the fetched results controller
 
 extension DeleteCellsVC: NSFetchedResultsControllerDelegate {
     
@@ -170,6 +172,7 @@ extension DeleteCellsVC: NSFetchedResultsControllerDelegate {
     }
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        
         insertedIndexPaths = [NSIndexPath]()
         deletedIndexPaths = [NSIndexPath]()
         updatedIndexPaths = [NSIndexPath]()
@@ -190,11 +193,17 @@ extension DeleteCellsVC: NSFetchedResultsControllerDelegate {
             for indexPath in self.updatedIndexPaths {
                 self.collectionView.reloadItemsAtIndexPaths([indexPath])
             }
-            }, completion: nil /*{ (success) in
+            }, completion: { (success) in
+                
+                print("The completion handler for controllerDidChangeContent was called")
+                print("Here is 'success':  ")
+                print(success)
+                
+                /*
                 if !self.getPhotoDownloadStatus().completed {
                     self.downloadAnImage()
-                }
-            } */
+                } */
+            }
         )
 
     }

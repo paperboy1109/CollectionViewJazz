@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let coreDataStack = CoreDataStack()
         let deleteCellsVC = self.window?.rootViewController as! DeleteCellsVC
-        deleteCellsVC.managedObjectContext = coreDataStack.managedObjectContext
+        //deleteCellsVC.managedObjectContext = coreDataStack.managedObjectContext
+        deleteCellsVC.coreDataStack = coreDataStack
         
         
         //deleteRecords()
