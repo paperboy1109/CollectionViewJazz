@@ -210,3 +210,7 @@ extension DeleteCellsVC: NSFetchedResultsControllerDelegate {
     
     
 }
+
+extension DeleteCellsVC {
+    // Delete this extension.  It exists only to verify that the sharedInstance branch has changes that 'master' does not.
+}
