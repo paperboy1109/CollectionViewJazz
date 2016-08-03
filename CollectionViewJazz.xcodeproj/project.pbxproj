@@ -294,8 +294,8 @@
 				4EAF391E1D4B1E850088E2AA /* Car.swift */,
 				4EAF391F1D4B1E850088E2AA /* CarImage+CoreDataProperties.swift */,
 				4EAF39201D4B1E850088E2AA /* CarImage.swift */,
-				4EAF38511D49CB760088E2AA /* CoreDataStack.swift */,
 				4EAF38531D49CC920088E2AA /* Model.xcdatamodeld */,
+				4EAF38511D49CB760088E2AA /* CoreDataStack.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";

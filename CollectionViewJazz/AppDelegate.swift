@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let coreDataStack = CoreDataStack()
-        let deleteCellsVC = self.window?.rootViewController as! DeleteCellsVC
+        //let coreDataStack = CoreDataStack()
+        //let deleteCellsVC = self.window?.rootViewController as! DeleteCellsVC
         //deleteCellsVC.managedObjectContext = coreDataStack.managedObjectContext
-        deleteCellsVC.coreDataStack = coreDataStack
+        //deleteCellsVC.coreDataStack = coreDataStack
         
         
         //deleteRecords()
