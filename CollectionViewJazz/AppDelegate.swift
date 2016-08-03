@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let imageName = String(car.year!.integerValue) + car.make! + car.model! + ".jpg"
                 let image = UIImage(named: imageName)
                 let carData = UIImageJPEGRepresentation(image!, 1)
-                car.thumbnail = scaleImage(carData!)
+                car.thumbnail = carData //scaleImage(carData!)
                 
                 let carImage = NSEntityDescription.insertNewObjectForEntityForName("CarImage", inManagedObjectContext: coreDataStack.managedObjectContext) as! CarImage
                 carImage.image = carData
@@ -122,6 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    /*
     func scaleImage(imageData: NSData) -> NSData {
         let carCFData = CFDataCreate(CFAllocator!.init(), UnsafePointer<UInt8>(imageData.bytes), imageData.length)
         let imageSource = CGImageSourceCreateWithData(carCFData, nil)
@@ -131,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let scaleImageData = UIImageJPEGRepresentation(scaledImage!, 1)
         
         return scaleImageData!
-    }
+    } */
     
     func deleteRecords() {
         let coreDataStack = CoreDataStack()

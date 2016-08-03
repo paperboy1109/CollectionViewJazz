@@ -40,16 +40,22 @@ class DeleteCellsVC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        /* Load sample data */
-        dataService = DataService(managedObjectContext: managedObjectContext)
-        carArray = dataService.getInventory()
+        /* Load sample data without a Fetched Results Controller */
+        // dataService = DataService(managedObjectContext: managedObjectContext)
+        // carArray = dataService.getInventory()
+        
+        // Use the Fetched Results Controller
+        loadDataWithFetchedResultsController()
     }
     
     // MARK: - Helpers
     
     func loadDataWithFetchedResultsController() {
         
+        print("loadDataWithFetchedResultsController called")
+        
         let fetchRequest = NSFetchRequest(entityName: "Car")
+        fetchRequest.sortDescriptors = []
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -71,12 +77,19 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        //return 1
+        
+        // Use the Fetched Results Controller
+        return fetchedResultsController.sections!.count ?? 0
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return carArray.count
+        // return carArray.count
+        
+        // Use the Fetched Results Controller
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
     
     
@@ -86,10 +99,23 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
         
         cell.imageView.backgroundColor = UIColor.blueColor()
         
+        
+        /* Without the Fetched Results Controller */
+        /*
         let car = carArray[indexPath.row]
         let carImage = car.carImage!
         let carUIImage = UIImage(data: carImage.image!)
-        cell.imageView.image = carUIImage
+        cell.imageView.image = carUIImage */
+        
+        /* With the Fetched Results Controller */
+        //x let indexPathAdjusted = NSIndexPath(forItem: indexPath.item - numberOfStaticCells, inSection: 0)
+        //x use adjusted indexPath for fetching an object
+        //x let photo = fetchedResultsController.objectAtIndexPath(indexPathAdjusted) as! Photo
+        let carFromfetchedResultsController = fetchedResultsController.objectAtIndexPath(indexPath) as! Car
+        //x var imageData: NSData!
+        let image = carFromfetchedResultsController.carImage!
+        let imageUIImage = UIImage(data: image.image!)
+        cell.imageView.image = imageUIImage
         
         return cell
         
