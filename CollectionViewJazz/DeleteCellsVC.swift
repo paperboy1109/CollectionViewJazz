@@ -173,6 +173,8 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
          */
         
         self.sharedContext.deleteObject(carToDelete!)
+        
+        CoreDataStack.sharedInstance().saveContext()
                 
     }
     
