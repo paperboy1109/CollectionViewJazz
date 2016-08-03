@@ -15,6 +15,12 @@ class DeleteCellsVC: UIViewController {
     
     var managedObjectContext: NSManagedObjectContext!
     
+    var fetchedResultsController: NSFetchedResultsController!
+    var insertedIndexPaths: [NSIndexPath]!
+    var deletedIndexPaths: [NSIndexPath]!
+    var updatedIndexPaths: [NSIndexPath]!
+    var carToDelete: Car?
+    
     var dataService: DataService!
     
     var carArray: [Car] = []
@@ -38,16 +44,25 @@ class DeleteCellsVC: UIViewController {
         dataService = DataService(managedObjectContext: managedObjectContext)
         carArray = dataService.getInventory()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Helpers
+    
+    func loadDataWithFetchedResultsController() {
+        
+        let fetchRequest = NSFetchRequest(entityName: "Car")
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+        // fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError("The fetched results controller failed to perform the fetch")
+        }
+        
     }
-    */
+
 
 }
 
@@ -86,9 +101,77 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
         
         print("Cell at index path \(indexPath) was tapped ")
         
+        /*
+        carToDelete = fetchedResultsController.objectAtIndexPath(indexPath) as? Car
+        self.managedObjectContext.deleteObject(self.movieToDelete!)
+        self.coreData.saveContext()
+        self.movieToDelete = nil */
+        
     }
     
     
+    
+    
+}
+
+
+extension DeleteCellsVC: NSFetchedResultsControllerDelegate {
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        
+        /* Detect the type of change that has triggered the event */
+        
+        switch type {
+            
+        case .Insert:
+            print("NSFetchedResultsChangeType.Insert detected")
+            let newIndexPathAdjusted = NSIndexPath(forItem: newIndexPath!.item, inSection: 0)
+            insertedIndexPaths.append(newIndexPathAdjusted)
+        case .Delete:
+            print("NSFetchedResultsChangeType.Delete detected")
+            let indexPathAdjusted = NSIndexPath(forItem: indexPath!.item, inSection: 0)
+            deletedIndexPaths.append(indexPathAdjusted)
+        case .Update:
+            print("NSFetchedResultsChangeType.Update detected")
+            let indexPathAdjusted = NSIndexPath(forItem: indexPath!.item, inSection: 0)
+            updatedIndexPaths.append(indexPathAdjusted)
+        case .Move:
+            print("NSFetchedResultsChangeType.Move detected")
+            fallthrough
+        default:
+            break
+        }
+    }
+    
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        insertedIndexPaths = [NSIndexPath]()
+        deletedIndexPaths = [NSIndexPath]()
+        updatedIndexPaths = [NSIndexPath]()
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        
+        self.collectionView.performBatchUpdates( { () -> Void in
+            
+            for indexPath in self.insertedIndexPaths {
+                self.collectionView.insertItemsAtIndexPaths([indexPath])
+            }
+            
+            for indexPath in self.deletedIndexPaths {
+                self.collectionView.deleteItemsAtIndexPaths([indexPath])
+            }
+            
+            for indexPath in self.updatedIndexPaths {
+                self.collectionView.reloadItemsAtIndexPaths([indexPath])
+            }
+            }, completion: nil /*{ (success) in
+                if !self.getPhotoDownloadStatus().completed {
+                    self.downloadAnImage()
+                }
+            } */
+        )
+
+    }
     
     
 }

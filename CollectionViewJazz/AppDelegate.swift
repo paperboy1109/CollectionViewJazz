@@ -60,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let request = NSFetchRequest(entityName: "Car")
         
         let carsCount = coreDataStack.managedObjectContext.countForFetchRequest(request, error: nil)
+        
         print("Total cars: \(carsCount)")
         
         if carsCount == 0 {
