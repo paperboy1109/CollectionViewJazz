@@ -12,12 +12,9 @@ import CoreData
 class DeleteCellsVC: UIViewController {
     
     // MARK: - Properties
-    
-    // var managedObjectContext: NSManagedObjectContext!
-    // var coreDataStack: CoreDataStack!
+
     var sharedContext = CoreDataStack.sharedInstance().managedObjectContext
     
-    // var fetchedResultsController: NSFetchedResultsController!
     var insertedIndexPaths: [NSIndexPath]!
     var deletedIndexPaths: [NSIndexPath]!
     var updatedIndexPaths: [NSIndexPath]!
@@ -35,15 +32,10 @@ class DeleteCellsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        //self.managedObjectContext = coreDataStack.managedObjectContext
         
         /* Configure the collection view */
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         
         // Start the fetched results controller
         var error: NSError?
@@ -56,15 +48,7 @@ class DeleteCellsVC: UIViewController {
         if let error = error {
             print("Error performing initial fetch: \(error)")
         }
-        
-        
-        
-        /* Load sample data without a Fetched Results Controller */
-        // dataService = DataService(managedObjectContext: managedObjectContext)
-        // carArray = dataService.getInventory()
-        
-        // Use the Fetched Results Controller
-        loadDataWithFetchedResultsController()
+
     }
     
     // MARK: - NSFetchedResultsController
@@ -80,37 +64,16 @@ class DeleteCellsVC: UIViewController {
         return fetchedResultsController
     }()
     
-    // MARK: - Helpers
-    
-    func loadDataWithFetchedResultsController() {
-        /*
-        print("loadDataWithFetchedResultsController called")
-        
-        let fetchRequest = NSFetchRequest(entityName: "Car")
-        fetchRequest.sortDescriptors = []
-        
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
-        
-        fetchedResultsController.delegate = self
-        
-        do {
-            try fetchedResultsController.performFetch()
-        } catch {
-            fatalError("The fetched results controller failed to perform the fetch")
-        }
-        */
-    }
-
 
 }
 
 // MARK: - Delegate methods for the collection view
 
-
 extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        
         //return 1
         
         // Use the Fetched Results Controller
@@ -165,12 +128,6 @@ extension DeleteCellsVC: UICollectionViewDataSource, UICollectionViewDelegate {
         print("Cell at index path \(indexPath) was tapped ")
         
         carToDelete = fetchedResultsController.objectAtIndexPath(indexPath) as? Car
-        
-        /*
-        self.managedObjectContext.deleteObject(self.carToDelete!)
-        self.coreDataStack.saveContext()
-        self.carToDelete = nil
-         */
         
         self.sharedContext.deleteObject(carToDelete!)
         
@@ -241,10 +198,6 @@ extension DeleteCellsVC: NSFetchedResultsControllerDelegate {
                 print("Here is 'success':  ")
                 print(success)
                 
-                /*
-                if !self.getPhotoDownloadStatus().completed {
-                    self.downloadAnImage()
-                } */
             }
         )
 
